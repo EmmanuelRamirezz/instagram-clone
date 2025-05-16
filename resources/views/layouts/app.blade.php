@@ -16,7 +16,7 @@
                 </h1>
                 <nav class="flex gap-2 items-center">
                     <a class="font-bold uppercase text-gray-600 text-sm" href="#">Login</a>
-                    <a class="font-bold uppercase text-gray-600 text-sm" href="/crear-cuenta">Crear cuenta</a>
+                    <a class="font-bold uppercase text-gray-600 text-sm" href= "register">Crear cuenta</a>
                 </nav>
             </div>
         </header>
@@ -24,12 +24,16 @@
             <h2 class="font-black text-center text-3xl mb-10">
                 @yield('titulo')
             </h2>
-            @yield('contenido')
+            <p class="text-center">
+                @yield('contenido')
+            </p>
+
         </main>
         <footer class="mt-10 text-center p-5 text-gray-500 font-bold uppercase">
             Instagram - Todos los derechos reservados
             {{-- fecha --}}
-            @php echo date ('Y') @endphp
+            {{now()->year}}
+
         </footer>
     </body>
 </html>
